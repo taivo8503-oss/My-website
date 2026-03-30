@@ -1,0 +1,82 @@
+body{
+ margin:0;
+ overflow:hidden;
+ font-family:Arial;
+ color:white;
+ text-align:center;
+ background:black;
+}
+
+/* nền sao */
+.star{
+ position:absolute;
+ color:white;
+ animation:fall linear infinite;
+}
+
+@keyframes fall{
+ from{transform:translateY(-10px)}
+ to{transform:translateY(110vh)}
+}
+
+/* màn hình mật khẩu */
+#lockScreen{
+ margin-top:150px;
+}
+
+input{
+ padding:10px;
+ border-radius:10px;
+ border:none;
+}
+
+button{
+ padding:10px 20px;
+ border:none;
+ border-radius:10px;
+ background:#ff4b7d;
+ color:white;
+ cursor:pointer;
+}
+
+/* quyển sách */
+#book{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ perspective:1000px;
+}
+
+.page{
+ width:400px;
+ height:300px;
+ background:rgba(255,255,255,0.1);
+ backdrop-filter:blur(10px);
+ border-radius:20px;
+ padding:30px;
+ position:absolute;
+ transform-origin:left;
+ animation:flip 1s forwards;
+}
+
+@keyframes flip{
+ from{transform:rotateY(90deg)}
+ to{transform:rotateY(0)}
+}
+
+.hidden{ display:none; }
+
+/* tim nổ */
+.heart{
+ position:absolute;
+ font-size:30px;
+ animation:explode 1s forwards;
+}
+
+@keyframes explode{
+ to{
+  transform:translateY(-200px) scale(2);
+  opacity:0;
+ }
+}

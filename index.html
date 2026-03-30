@@ -1,0 +1,49 @@
+<<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>For You 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="sky"></div>
+
+<!-- màn hình mật khẩu -->
+<div id="lockScreen">
+    <h2>🔐 Nhập mật khẩu để mở thư</h2>
+    <input id="password" placeholder="Ngày chúng ta gặp nhau...">
+    <button onclick="checkPass()">Mở thư 💌</button>
+    <p id="error"></p>
+</div>
+
+<!-- quyển sách -->
+<div id="book" class="hidden">
+
+    <div class="page" id="page1">
+        <h1>Gửi em 💖</h1>
+        <p>Cuộc đời anh thay đổi từ ngày gặp em.</p>
+        <button onclick="nextPage()">Trang tiếp ➜</button>
+    </div>
+
+    <div class="page">
+        <h1>Every day with you</h1>
+        <p>Là một ngày hạnh phúc ✨</p>
+        <button onclick="nextPage()">Trang tiếp ➜</button>
+    </div>
+
+    <div class="page">
+        <h1>I LOVE YOU 💘</h1>
+        <button onclick="heartExplosion()">Bấm vào đây ❤️</button>
+    </div>
+
+</div>
+
+<audio id="music" loop>
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
